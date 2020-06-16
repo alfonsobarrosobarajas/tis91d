@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service // Anotación que indica que esta clase funciona como un servicio, es decir, operaciones con la base de datos
 public class ContactoService extends CRUD<Contacto, ContactoRepository> {
 
 
@@ -27,7 +27,7 @@ public class ContactoService extends CRUD<Contacto, ContactoRepository> {
 
     @Override
     public void add(Contacto o) {
-
+        repository.save(o);
     }
 
     @Override
